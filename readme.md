@@ -18,3 +18,28 @@ The project is composed of multiple files separating the main execution from the
 * **Date Manipulation:** The application uses `SimpleDateFormat` to parse string inputs into `Date` objects. Inside the `Worker` class, it utilizes the `Calendar` class to extract the specific month and year from each contract's date to match against the user's target query.
 * **Dynamic Income Calculation:** The total income is calculated dynamically. It starts with the worker's base salary and iterates through all associated contracts. If a contract's month and year match the requested parameters, the contract's total value (`valuePerHour * hours`) is added to the total sum.
 * **Localization:** Enforces the US locale (`Locale.setDefault(Locale.US)`) to ensure consistency in parsing decimal numbers for salaries and hourly rates.
+
+## Execution Example
+
+```text
+Enter department's name: Design
+Enter worker data:
+Name: Alex
+Level: MID_LEVEL
+Base salary: 1200.00
+
+How many contracts to this worker? 2
+
+Enter contract #1 data:
+Date (DD/MM/YYYY): 20/08/2018
+Value per hour: 50.00
+Duration (hours): 20
+Enter contract #2 data:
+Date (DD/MM/YYYY): 13/06/2018
+Value per hour: 30.00
+Duration (hours): 18
+
+Enter month and year to calculate income (MM/YYYY): 08/2018
+Name: Alex
+Department: Design
+Income for 08/2018: 2200.00
